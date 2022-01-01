@@ -6,12 +6,14 @@ import json
 import random
 
 import illumi
+import space
 import status
 from content_type import *
 
 app = Flask(__name__)
 
 app.register_blueprint(illumi.blueprint)
+app.register_blueprint(space.blueprint)
 app.register_blueprint(status.blueprint)
 
 @app.route("/")

@@ -7,6 +7,13 @@
     </head>
     <body>
         <h2 style="color:white;-webkit-text-stroke:2px #66cbea;"><img src="/image/31.png" width=40>31core's website</h2>
+        <!-- Menu -->
+        <div style="position:relative;left:50%">
+            <a class="menu" href="/">Home</a>
+            <a class="menu" href="/about.html">About</a>
+        </div>
+
+        <!-- 'My projects' title -->
         <p class="title">My projects:</p>
         <p class="content">
             <!-- illumi kernel -->
@@ -15,12 +22,12 @@
             <a style="float:right;" class="button" href="https://gitlab.com/31core/illumi">GitLab</a>
             <br><br>
             <!-- Anicat Programming Language -->
-            <a href="https://github.com/31core/anicat">Anicat Programming Language</a>
+            <a href="https://gitlab.com/31core/anicat">Anicat Programming Language</a>
             <a style="float:right;" class="button" href="https://github.com/31core/anicat">GitHub</a>
             <a style="float:right;" class="button" href="https://gitlab.com/31core/anicat">GitLab</a>
             <br><br>
             <!-- Anicoin -->
-            <a href="https://github.com/31core/anicoin">Anicoin</a>
+            <a href="https://gitlab.com/31core/anicoin">Anicoin</a>
             <a style="float:right;" class="button" href="https://github.com/31core/anicoin">GitHub</a>
             <a style="float:right;" class="button" href="https://gitlab.com/31core/anicoin">GitLab</a>
             <br>
@@ -41,7 +48,7 @@
         <p class="title">Bilibili 粉丝统计:</p>
         <p id="follower">{follower}</p>
         <script>
-            document.getElementById("follower").innerHTML = "27";
+            document.getElementById("follower").innerHTML = "105";
             var request = new XMLHttpRequest();
             request.onreadystatechange = function(){
                 //判断返回状态是否正常

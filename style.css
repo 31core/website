@@ -31,18 +31,18 @@
 {
     font-size: 90%;
     color: white;
-    background-color: #1acab0;
+    background-color: #35abdd;
     padding: 4px 8px;
     border-style: solid;
     border-radius: 4px;
     border-width: 1px;
-    border-color: #00a2e8;
+    border-color: #0c84b8;
     transition-duration: 0.4s;
     text-decoration: none;
 }
 .button:hover
 {
-    background-color: #00a2e8;
+    background-color: #3db2e4;
 }
 
 .label

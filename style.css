@@ -6,7 +6,15 @@
     border-radius: 3px;
     text-decoration: none;
 }
-
+.menu:hover
+{
+    border-top-style: solid;
+    border-top-color: #a0efea;
+    border-top-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #a0efea;
+    border-bottom-width: 3px;
+}
 .title
 {
     background-color: #66cbea;
@@ -54,7 +62,8 @@
 .banner
 {
     background-color: #0078d7;
-    padding: 10px 35%;
+    text-align: center;
+    padding: 10px;
     border-radius: 3px;
 }
 .code

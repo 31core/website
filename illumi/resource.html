@@ -6,11 +6,11 @@
     </head>
     <body>
         <h2><img src="/image/logo-sm.png" width="40">illumi Kernel Project</h2>
-        <div style="position:relative;left:50%">
+        <span style="position:relative;left:50%">
             <a class="menu" href="/illumi">Home</a>
             <a class="menu" href="https://31core.pythonanywhere.com/illumi/resource.html">Resource</a>
             <a class="menu" href="/illumi/about.html">About</a>
-        </div>
+        </span>
 
         <h3 class="title">Toolchain</h3>
         <div class="content">
@@ -22,11 +22,12 @@
         </div>
         <div class="content">
             <a class="label">Linux:</a>
-            <p class="code">$ sudo apt install build-essential nasm qemu-system-x86</p>
+            <p class="code">$ sudo apt install build-essential nasm qemu-system-x86 #for Debian based systems</p>
+            <p class="code">$ sudo yum install gcc nasm qemu #for Red-Hat based systems</p>
             or download auto setup script <a href="/resource/env_setup.sh?type=download">here</a>.
         </div>
 
-        <h3 class="title">zip archive</h3>
+        <h3 class="title">Compressed archive</h3>
         <div class="content">
             <p>
                 <a class="label">.zip archive: </a>
@@ -42,6 +43,6 @@
             </p>
             <div class="label">Provided by <a href="https://gitlab.com">GitLab.com</a></div>
         </div>
-        <p class="banner" style="font-size:13px;">Copyright © 2021 31core All Rights Reserved.</p>
+        <p class="banner" style="font-size:13px;">Copyright © 2021-2022 31core All Rights Reserved.</p>
     </body>
 </html>

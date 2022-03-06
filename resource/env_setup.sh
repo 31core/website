@@ -15,6 +15,6 @@ for i in [ CentOS Fedora ]
 do
 	if [ $os_release = $i ]
 	then
-		sudo yum install gcc nasm
+		sudo yum install gcc nasm make qemu
 	fi
 done

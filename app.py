@@ -6,6 +6,7 @@ import json
 import random
 
 import illumi
+import anicat
 import space
 import status
 from content_type import *
@@ -13,6 +14,7 @@ from content_type import *
 app = Flask(__name__)
 
 app.register_blueprint(illumi.blueprint)
+app.register_blueprint(anicat.blueprint)
 app.register_blueprint(space.blueprint)
 app.register_blueprint(status.blueprint)
 

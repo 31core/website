@@ -39,7 +39,7 @@
 {
     font-size: 90%;
     color: white;
-    background-color: #35abdd;
+    background-color: #35abff;
     padding: 4px 8px;
     border-style: solid;
     border-radius: 4px;
@@ -50,7 +50,7 @@
 }
 .button:hover
 {
-    background-color: #3db2e4;
+    background-color: #3dcce4;
 }
 
 .label

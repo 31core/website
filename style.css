@@ -5,16 +5,36 @@
     padding: 6px 10px;
     border-radius: 3px;
     text-decoration: none;
+    transition: 0.1s;
 }
 .menu:hover
 {
-    border-top-style: solid;
-    border-top-color: #a0efea;
-    border-top-width: 3px;
     border-bottom-style: solid;
     border-bottom-color: #a0efea;
-    border-bottom-width: 3px;
+    border-bottom-width: 4px;
 }
+.menu span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.menu span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+.menu:hover span {
+    padding-right: 15px;
+}
+.menu:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
 .title
 {
     background-color: #66cbea;

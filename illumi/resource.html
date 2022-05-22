@@ -5,13 +5,16 @@
         <link href="/image/logo-sm.png" rel="icon" type="image/png">
     </head>
     <body>
+        <!-- logo -->
         <h2><img src="/image/logo-sm.png" width="40">illumi Kernel Project</h2>
+        <!-- menu -->
         <span style="position:relative;left:50%">
-            <a class="menu" href="/illumi">Home</a>
-            <a class="menu" href="https://31core.pythonanywhere.com/illumi/resource.html">Resource</a>
-            <a class="menu" href="/illumi/about.html">About</a>
+            <a class="menu" href="/illumi"><span>Home</span></a>
+            <a class="menu" href="/illumi/resource.html"><span>Resource</span></a>
+            <a class="menu" href="/illumi/about.html"><span>About</span></a>
         </span>
 
+        <!-- Toolchain -->
         <h3 class="title">Toolchain</h3>
         <div class="content">
             <a class="label">Windows:</a>
@@ -26,7 +29,12 @@
             <p class="code">$ sudo yum install gcc nasm make qemu #for Redhat based system</p>
             or download auto setup script <a href="/resource/env_setup.sh?type=download">here</a>.
         </div>
+        <div class="content">
+            <a class="label">macOS:</a>
+            <p class="code">$ brew install nasm qemu</p>
+        </div>
 
+        <!-- Compressed archive -->
         <h3 class="title">Compressed archive</h3>
         <div class="content">
             <p>

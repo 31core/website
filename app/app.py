@@ -1,5 +1,7 @@
 from flask import Flask, request, abort, redirect
+import flask
 import os
+import sys
 import re
 import time
 import json
@@ -62,3 +64,11 @@ def get_post():
             f.write(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + "\n")
             f.write(request.form.get("data") + "\n\n")
     return redirect("/")
+
+@app.route("/version")
+def version():
+    with open("version.html", "r") as f:
+        data = f.read()
+        data = data.replace("{py_version}", sys.version)
+        data = data.replace("{flask_version}", flask.__version__)
+    return data

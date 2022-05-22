@@ -18,3 +18,9 @@ do
 		sudo yum install gcc nasm make qemu
 	fi
 done
+
+#macOS
+if [ $(uname -a) = Darwin ]
+then
+	brew install nasm qemu
+fi

@@ -17,7 +17,7 @@ content_types = {
     "wav": "audio/wav"
 }
 
-def content_type(name: str):
+def content_type(name: str) -> str:
     name = name.split(".")[-1]
     if name.lower() in content_types:
         return content_types[name.lower()]

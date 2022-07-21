@@ -5,7 +5,7 @@ import sys
 import re
 import time
 import json
-import random
+import better_random as random
 
 import illumi
 import anicat
@@ -23,7 +23,7 @@ app.register_blueprint(status.blueprint)
 @app.route("/")
 def index():
     with open("index.html", "r") as f:
-        with open("musiclist.json", "r") as l:
+        with open("musiclist.jsonc", "r") as l:
             json_data = l.read()
             json_data = re.sub(r"/\*[\w ]*\*/", "", json_data) #清除注释
             lis = json.loads(json_data)

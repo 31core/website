@@ -1,7 +1,7 @@
 from flask import Blueprint, abort
 import os, sys
 
-def py_version(src):
+def py_version(src: str) -> str:
     src = src.replace("{py_version}", sys.version)
     return src
 

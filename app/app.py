@@ -1,4 +1,4 @@
-from flask import Flask, request, abort, redirect
+from flask import Flask, request, abort, redirect, render_template
 import flask
 import os
 import sys
@@ -12,8 +12,9 @@ import anicat
 import space
 import status
 from content_type import *
+from subpages import *
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder = "../")
 
 app.register_blueprint(illumi.blueprint)
 app.register_blueprint(anicat.blueprint)
@@ -22,15 +23,14 @@ app.register_blueprint(status.blueprint)
 
 @app.route("/")
 def index():
-    with open("index.html", "r") as f:
-        with open("musiclist.jsonc", "r") as l:
-            json_data = l.read()
-            json_data = re.sub(r"/\*[\w ]*\*/", "", json_data) #清除注释
-            lis = json.loads(json_data)
-            url = random.choice(lis)
-        html = f.read()
-        html = html.replace("{music_url}", url)
-        return html
+    with open("musiclist.jsonc", "r") as l:
+        json_data = l.read()
+        json_data = re.sub(r"/\*[\w ]*\*/", "", json_data) #清除注释
+        lis = json.loads(json_data)
+        url = random.choice(lis)
+    return render_template("index.html",
+        music_url = url,
+        menu = menu)
 
 @app.route("/<file>")
 def file(file):
@@ -38,6 +38,9 @@ def file(file):
         abort(404)
     if file == "index.html":
         return redirect("/")
+    if file.split(".")[-1] == "html":
+        return render_template(file,
+        menu = menu)
     with open(file, "rb") as f:
         return f.read(), 200, {"Content-Type": content_type(file)}
 

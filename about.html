@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>31core - About</title>
@@ -9,13 +9,9 @@
 	<body>
 		<!-- logo -->
 		<h2 style="color:white;-webkit-text-stroke:2px #66cbea;"><img src="/image/31.png" width=40>31core's website</h2>
-		<!-- Menu -->
-		<span style="position:relative;left:50%">
-			<a class="menu" href="/"><span>Home</span></a>
-			<a class="menu" href="/space"><span>Space</span></a>
-			<a class="menu" href="/about.html"><span>About</span></a>
-			<br>
-		</span>
+		{% autoescape false %}
+		{{menu}}
+		{% endautoescape %}
 
 		<p class="title">About me:</p>
 		<p class="content">

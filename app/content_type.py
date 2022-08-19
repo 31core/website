@@ -17,8 +17,11 @@ content_types = {
     "wav": "audio/wav"
 }
 
-def content_type(name: str) -> str:
+def content_type(name: str, charset = None) -> str:
     name = name.split(".")[-1]
     if name.lower() in content_types:
+        if charset != None and\
+            content_types[name.lower()].split("/")[0] == "text":
+            return "%s; charset=%s"%(content_types[name.lower()], charset)
         return content_types[name.lower()]
     return "application/octet-stream"

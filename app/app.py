@@ -25,9 +25,9 @@ app.register_blueprint(status.blueprint)
 def index():
     with open("musiclist.jsonc", "r") as l:
         json_data = l.read()
-        json_data = re.sub(r"/\*[\w ]*\*/", "", json_data) #清除注释
+        json_data = re.sub(r"/\*[\S ]*\*/", "", json_data) #清除注释
         lis = json.loads(json_data)
-        url = random.choice(lis)
+        url = "//music.163.com/outchain/player?type=2&id=%s&auto=1&height=66"%random.choice(lis)
     return render_template("index.html",
         music_url = url,
         menu = menu)
@@ -70,8 +70,5 @@ def get_post():
 
 @app.route("/version")
 def version():
-    with open("version.html", "r") as f:
-        data = f.read()
-        data = data.replace("{py_version}", sys.version)
-        data = data.replace("{flask_version}", flask.__version__)
-    return data
+    return render_template("version.html", py_version = sys.version,
+        flask_version = flask.__version__)

@@ -11,6 +11,7 @@ import illumi
 import anicat
 import space
 import status
+import config
 from content_type import *
 from subpages import *
 
@@ -72,3 +73,8 @@ def get_post():
 def version():
     return render_template("version.html", py_version = sys.version,
         flask_version = flask.__version__)
+
+@app.route("/favicon.ico")
+def favicon():
+    with open(config.favicon, "rb") as f:
+        return f.read(), 200, {"Content-Type": content_type(config.favicon)}

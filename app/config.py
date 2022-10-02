@@ -1,1 +1,1 @@
-favicon = "./image/31.png"
+favicon = "./image/31.webp"

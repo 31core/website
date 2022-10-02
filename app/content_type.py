@@ -10,6 +10,7 @@ content_types = {
     "png": "image/png",
     "jpg": "image/jpeg",
     "jpeg": "image/jpeg",
+    "webp": "image/webp",
     "gif": "image/gif",
     "mp4": "video/mpeg4",
     "mid": "audio/mid",
